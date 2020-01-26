@@ -4,7 +4,7 @@ import './app.css';
 function App() {
   return (
     <div className="app-wrapper">
-      <h2 className="text-align-center">Huddl App</h2>
+      <h2 className="text-align-center">Huddl Assignment</h2>
     </div>
   );
 }
