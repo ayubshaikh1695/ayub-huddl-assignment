@@ -43,7 +43,7 @@ class AllPosts extends React.Component {
                 <i class="fas fa-user-circle user-icon"></i>
               </div>
               <div>
-                <div className="pri-txt mb-8">{post.title ? post.title : "N/A"}</div>
+                <div className="pri-txt mb-4">{post.title ? post.title : "N/A"}</div>
                 <div className="sec-txt user-name">{post.username ? post.username : "N/A"}</div>
               </div>
             </li>
