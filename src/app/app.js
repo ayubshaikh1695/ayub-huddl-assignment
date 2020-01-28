@@ -4,10 +4,14 @@ import AllPosts from './components/all-posts/all-posts';
 
 function App() {
   return (
-    <div className="app-wrapper">
-      <h2 className="text-align-center">Huddl Assignment</h2>
-      <AllPosts/>
-    </div>
+    <React.Fragment>
+      <header className="header">
+        <h2 className="header-label">Test</h2>
+      </header>
+      <div className="app-wrapper bg-lavender">
+        <AllPosts />
+      </div>
+    </React.Fragment>
   );
 }
 
