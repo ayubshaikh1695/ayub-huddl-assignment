@@ -1,7 +1,9 @@
 .spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: inherit;
+  height: calc(100vh - 80px);
   font-size: 32px;
-  text-align: center;
   color: #24244f;
 }
