@@ -1,6 +1,7 @@
 import React from 'react';
 import './all-posts.css';
-import { fetchUsers, fetchPosts } from '../../services/api-service'
+import { fetchUsers, fetchPosts } from '../../services/api-service';
+import Spinner from '../../shared/spinner/spinner';
 
 class AllPosts extends React.Component {
   constructor(props) {
@@ -40,16 +41,14 @@ class AllPosts extends React.Component {
           {posts.map((post, i) => {
             return <li key={i} className="post-list">
               <div className="mr-12">
-                <i class="fas fa-user-circle user-icon"></i>
+                <i className="fas fa-user-circle user-icon"></i>
               </div>
               <div>
                 <div className="pri-txt mb-4">{post.title ? post.title : "N/A"}</div>
                 <div className="sec-txt user-name">{post.username ? post.username : "N/A"}</div>
               </div>
             </li>
-          })}</ul> : <div className="spinner-container">
-            <i class="fas fa-circle-notch fa-spin"></i>
-          </div>}
+          })}</ul> : <Spinner />}
       </div>
     );
   }

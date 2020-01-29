@@ -1,10 +1,12 @@
 import React from 'react';
 import './app.css';
 import AllPosts from './components/all-posts/all-posts';
+import Post from './components/post/post';
 import {
   BrowserRouter as Router,
   Switch,
-  Route, Redirect
+  Route,
+  Redirect
 } from "react-router-dom";
 
 function App() {
@@ -22,6 +24,9 @@ function App() {
             <Route path="/posts">
               <AllPosts />
             </Route>
+            <Route path="/post/:userId/:postId" component={ Post } />
+              {/* <Post /> */}
+            {/* </Route> */}
           </Switch>
         </div>
       </Router>
