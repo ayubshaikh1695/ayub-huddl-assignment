@@ -1,0 +1,6 @@
+.user-main-detail,
+.user-company-detail {
+  padding: 32px;
+  border-radius: 4px 4px 0px 0px;
+  background-color: #f5f5f5;
+}

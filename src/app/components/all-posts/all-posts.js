@@ -19,7 +19,7 @@ class AllPosts extends React.Component {
 
       fetchPosts(this.abortSignal).then(res => {
         const posts = res.data;
-        
+
         const postsList = posts.map(post => {
           return {
             title: post.title,
@@ -55,6 +55,11 @@ class AllPosts extends React.Component {
     this.props.history.push(`/post?userId=${userId}&postId=${postId}`);
   }
 
+  navigateToUserRoute(e, userId) {
+    e.stopPropagation();
+    this.props.history.push(`/user?userId=${userId}`);
+  }
+
   componentWillUnmount() {
     this.signal.cancel('Api is being canceled');
   }
@@ -71,7 +76,9 @@ class AllPosts extends React.Component {
               </div>
               <div>
                 <div className="pri-txt mb-4">{post.title ? post.title : "N/A"}</div>
-                <div className="sec-txt user-name">{post.userData.username ? post.userData.username : "N/A"}</div>
+                <div className="sec-txt user-name"
+                  onClick={(e) => this.navigateToUserRoute(e, post.userData.userId)}>
+                  {post.userData.username ? post.userData.username : "N/A"}</div>
               </div>
             </li>
           })}</ul> : <Spinner />}

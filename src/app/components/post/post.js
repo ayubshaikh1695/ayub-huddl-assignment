@@ -51,14 +51,6 @@ class Post extends React.Component {
     });
   }
 
-  getUsername(users, userId) {
-    for (let i = 0; i < users.length; i++) {
-      if (users[i].id === userId) {
-        return users[i].username;
-      }
-    }
-  }
-
   componentWillUnmount() {
     this.signal.cancel('Api is being canceled');
   }
