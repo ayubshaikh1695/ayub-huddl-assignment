@@ -21,12 +21,8 @@ function App() {
             <Route exact path='/'>
               <Redirect to="/posts"></Redirect>
             </Route>
-            <Route path="/posts">
-              <AllPosts />
-            </Route>
-            <Route path="/post/:userId/:postId" component={ Post } />
-              {/* <Post /> */}
-            {/* </Route> */}
+            <Route path="/posts" component={AllPosts} />>
+            <Route path="/post" component={Post} />
           </Switch>
         </div>
       </Router>
