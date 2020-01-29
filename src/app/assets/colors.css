@@ -1,7 +1,11 @@
 .c-white {
-    color: white;
+    color: #ffffff;
 }
 
 .bg-lavender {
     background-color: #dfe7ed;
-  }
+}
+
+.bg-white {
+    background-color: #ffffff;
+}

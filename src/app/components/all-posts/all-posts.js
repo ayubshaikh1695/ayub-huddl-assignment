@@ -16,8 +16,10 @@ class AllPosts extends React.Component {
   componentDidMount() {
     fetchUsers(this.abortSignal).then(res => {
       const users = res.data;
+
       fetchPosts(this.abortSignal).then(res => {
         const posts = res.data;
+        
         const postsList = posts.map(post => {
           return {
             title: post.title,

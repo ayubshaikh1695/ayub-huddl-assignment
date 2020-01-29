@@ -66,10 +66,10 @@ class Post extends React.Component {
   render() {
     const { postInfo } = this.state;
     return (
-      <div className="posts-wrapper">
+      <div className="iv-post-wrapper">
         {postInfo ?
-          <div className="post-container">
-            <div className="post-detail mb-24 flex align-center">
+          <div className="iv-post-container br-rd-4 bx-shw bg-white">
+            <div className="iv-post-detail bx-shw mb-24 flex align-center">
               <div className="mr-12">
                 <i className="fas fa-user-circle user-icon"></i>
               </div>
@@ -81,12 +81,12 @@ class Post extends React.Component {
             {postInfo.comments && postInfo.comments.length > 0 ?
               <ul className="comments-container">
                 {postInfo.comments.map((comment, i) => {
-                  return <li key={i} className="comment-list mb-16">
+                  return <li key={i} className="iv-comment-list mb-16 bx-shw">
                     <div className="mb-8">
-                      <div className="pri-txt">{comment.name ? comment.name : "N/A"}</div>
+                      <div className="pri-txt fw-600">{comment.name ? comment.name : "N/A"}</div>
                       <div className="sec-txt">{comment.email ? comment.email : "N/A"}</div>
                     </div>
-                    <div className="sec-txt">{comment.body ? comment.body : "N/A"}</div>
+                    <div className="pri-txt">{comment.body ? comment.body : "N/A"}</div>
                   </li>
                 })}
               </ul> : <div className="sec-txt">No comments available</div>
