@@ -13,17 +13,19 @@ function App() {
   return (
     <React.Fragment>
       <header className="header">
-        <h2 className="header-label">Huddl Assignment</h2>
+        <h2 className="c-white">Huddl Assignment</h2>
       </header>
       <Router>
         <div className="app-wrapper bg-lavender">
-          <Switch>
-            <Route exact path='/'>
-              <Redirect to="/posts"></Redirect>
-            </Route>
-            <Route path="/posts" component={AllPosts} />>
+          <div className="jumbotron">
+            <Switch>
+              <Route exact path='/'>
+                <Redirect to="/posts"></Redirect>
+              </Route>
+              <Route path="/posts" component={AllPosts} />>
             <Route path="/post" component={Post} />
-          </Switch>
+            </Switch>
+          </div>
         </div>
       </Router>
     </React.Fragment>
