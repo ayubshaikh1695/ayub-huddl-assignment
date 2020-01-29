@@ -1,21 +1,21 @@
 import axios from 'axios';
 
-export function fetchPosts() {
-    return axios.get(`https://jsonplaceholder.typicode.com/posts`);
+export function fetchPosts(abortSignal) {
+    return axios.get(`https://jsonplaceholder.typicode.com/posts`, abortSignal);
 }
 
-export function fetchUsers() {
-    return axios.get(`https://jsonplaceholder.typicode.com/users`);
+export function fetchUsers(abortSignal) {
+    return axios.get(`https://jsonplaceholder.typicode.com/users`, abortSignal);
 }
 
-export function fetchPostById(id) {
-    return axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
+export function fetchPostById(id, abortSignal) {
+    return axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`, abortSignal);
 }
 
-export function fetchUserById(id) {
-    return axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
+export function fetchUserById(id, abortSignal) {
+    return axios.get(`https://jsonplaceholder.typicode.com/users/${id}`, abortSignal);
 }
 
-export function fetchCommentsByPostId(id) {
-    return axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${id}`);
+export function fetchCommentsByPostId(id, abortSignal) {
+    return axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${id}`, abortSignal);
 }
