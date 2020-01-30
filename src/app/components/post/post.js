@@ -30,6 +30,7 @@ class Post extends React.Component {
 
           const data = {
             username: user.username,
+            userId: user.id,
             title: post.title,
             comments: comments
           }
@@ -51,6 +52,11 @@ class Post extends React.Component {
     });
   }
 
+  navigateToUserRoute(e, userId) {
+    e.stopPropagation();
+    this.props.history.push(`/user?userId=${userId}`);
+  }
+
   componentWillUnmount() {
     this.signal.cancel('Api is being canceled');
   }
@@ -67,7 +73,8 @@ class Post extends React.Component {
               </div>
               <div>
                 <div className="pri-txt fw-600 mb-4">{postInfo.title ? postInfo.title : "N/A"}</div>
-                <div className="sec-txt user-name">{postInfo.username ? postInfo.username : "N/A"}</div>
+                <div className="sec-txt user-name" onClick={(e) => this.navigateToUserRoute(e, postInfo.userId)}>
+                  {postInfo.username ? postInfo.username : "N/A"}</div>
               </div>
             </div>
             {postInfo.comments && postInfo.comments.length > 0 ?
