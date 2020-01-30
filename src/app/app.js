@@ -13,23 +13,21 @@ import Header from './shared/header/header';
 
 function App() {
   return (
-    <React.Fragment>
+    <Router>
       <Header />
-      <Router>
-        <div className="app-wrapper bg-lavender">
-          <div className="jumbotron">
-            <Switch>
-              <Route exact path='/'>
-                <Redirect to="/posts"></Redirect>
-              </Route>
-              <Route path="/posts" component={AllPosts} />>
+      <div className="app-wrapper bg-lavender">
+        <div className="jumbotron">
+          <Switch>
+            <Route exact path='/'>
+              <Redirect to="/posts"></Redirect>
+            </Route>
+            <Route path="/posts" component={AllPosts} />>
             <Route path="/post" component={Post} />
-              <Route path="/user" component={User} />
-            </Switch>
-          </div>
+            <Route path="/user" component={User} />
+          </Switch>
         </div>
-      </Router>
-    </React.Fragment>
+      </div>
+    </Router>
   );
 }
 
