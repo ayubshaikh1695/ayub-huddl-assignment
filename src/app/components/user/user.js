@@ -39,7 +39,7 @@ class User extends React.Component {
         {userInfo ?
           <div className="user-container br-rd-4 bx-shw bg-white">
             <div className="user-main-detail mb-4 flex align-center">
-              <div className="mr-12">
+              <div className="mr-12 self-start">
                 <i className="fas fa-user-circle user-icon"></i>
               </div>
               <div>
@@ -57,7 +57,7 @@ class User extends React.Component {
               </div>
             </div>
             <div className="user-company-detail mb-24 flex align-center">
-              <div className="mr-12">
+              <div className="mr-12 self-start">
                 <i className="fas fa-briefcase user-icon"></i>
               </div>
               <div>
