@@ -46,11 +46,11 @@ class User extends React.Component {
                 <div className="pri-txt fw-600 mb-4">{userInfo.name ? userInfo.name : "N/A"}</div>
                 <div className="sec-txt mb-4">{userInfo.username ? '@' + userInfo.username : "N/A"}</div>
                 <div>
-                  <span className="sec-txt"><i class="fas fa-envelope"></i>
+                  <span className="sec-txt"><i className="fas fa-envelope"></i>
                     &ensp;
                   {userInfo.email ? userInfo.email : "N/A"}</span>
                   &emsp;
-                <span className="sec-txt"><i class="fas fa-globe-americas"></i>
+                <span className="sec-txt"><i className="fas fa-globe-americas"></i>
                     &ensp;
                 {userInfo.website ? userInfo.website : "N/A"}</span>
                 </div>
@@ -58,7 +58,7 @@ class User extends React.Component {
             </div>
             <div className="user-company-detail mb-24 flex align-center">
               <div className="mr-12">
-                <i class="fas fa-briefcase user-icon"></i>
+                <i className="fas fa-briefcase user-icon"></i>
               </div>
               <div>
                 <div className="sec-txt mb-4"><span className="pri-txt fw-600">Company name : </span>{userInfo.company.name ? userInfo.company.name : "N/A"}</div>
