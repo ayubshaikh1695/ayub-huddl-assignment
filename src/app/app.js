@@ -9,13 +9,12 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+import Header from './shared/header/header';
 
 function App() {
   return (
     <React.Fragment>
-      <header className="header">
-        <h2 className="c-white">Huddl Assignment</h2>
-      </header>
+      <Header />
       <Router>
         <div className="app-wrapper bg-lavender">
           <div className="jumbotron">
