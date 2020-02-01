@@ -131,9 +131,9 @@ class Autocomplete extends React.Component {
             {filteredList.map((listItem, index) => {
               let className;
               if (index === activeListItem) {
-                className = "autocomplete-list-item-active";
+                className = "autocomplete-list-item-active pri-txt";
               } else {
-                className = "autocomplete-list-item";
+                className = "autocomplete-list-item pri-txt";
               }
               return (
                 <li className={className}
