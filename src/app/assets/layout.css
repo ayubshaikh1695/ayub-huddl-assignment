@@ -19,6 +19,10 @@
   margin-bottom: 24px;
 }
 
+.ml-16 {
+  margin-left: 16px;
+}
+
 /* flex */
 .flex {
   display: flex;

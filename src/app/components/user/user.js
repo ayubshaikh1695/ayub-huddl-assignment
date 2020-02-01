@@ -15,9 +15,15 @@ class User extends React.Component {
   }
 
   componentDidMount() {
+    this.userDetails();
+  }
+
+
+  userDetails = () => {
     const queryValues = queryString.parse(this.props.location.search);
     const userId = queryValues.userId;
 
+    this.setState({ userInfo: null });
     fetchUserById(userId, this.abortSignal).then(res => {
       const user = res.data;
       this.setState({ userInfo: user });
@@ -26,6 +32,12 @@ class User extends React.Component {
         console.log('Error: ', err.message);
       }
     });
+  }
+
+  componentDidUpdate(nextProps) {
+    if (nextProps.location !== this.props.location) {
+      this.userDetails();
+    }
   }
 
   componentWillUnmount() {
