@@ -85,7 +85,7 @@ class Post extends React.Component {
                       <div className="pri-txt fw-600">{comment.name ? comment.name : "N/A"}</div>
                       <div className="sec-txt">{comment.email ? comment.email : "N/A"}</div>
                     </div>
-                    <div className="pri-txt">{comment.body ? comment.body : "N/A"}</div>
+                    <div className="pri-txt br-rd-4 comment-content">{comment.body ? comment.body : "N/A"}</div>
                   </li>
                 })}
               </ul> : <div className="sec-txt">No comments available</div>
